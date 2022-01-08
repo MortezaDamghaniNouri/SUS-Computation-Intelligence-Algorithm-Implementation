@@ -21,7 +21,7 @@ while i <= (number_of_entities - 1):
     i += 1
 
 
-random_number = random.random()
+random_number = random.uniform(0, 1 / number_of_entities)
 new_second_ruler = []
 for i in second_ruler:
     new_second_ruler.append(i + random_number)
@@ -51,7 +51,7 @@ while i < len(new_second_ruler):
 
 
 print("The generated random number is: " + str(random_number))
-print("The result is : " + str(result))
+print("The selected entities numbers are: " + str(result))
 
 
 
