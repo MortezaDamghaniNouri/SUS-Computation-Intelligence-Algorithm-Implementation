@@ -1,6 +1,5 @@
 
 import random
-
 number_of_entities = int(input("Enter the number of entities you have: "))
 i = 1
 probabilities = []
@@ -14,14 +13,16 @@ while i < len(probabilities):
     first_ruler.append(round(first_ruler[i - 1] + probabilities[i], 2))
     i += 1
 
+
+number_of_samples = int(input("Enter the number of samples you want to generate: "))
 second_ruler = [0]
 i = 1
-while i <= (number_of_entities - 1):
-    second_ruler.append(i / number_of_entities)
+while i <= (number_of_samples - 1):
+    second_ruler.append(i / number_of_samples)
     i += 1
 
 
-random_number = random.uniform(0, 1 / number_of_entities)
+random_number = random.uniform(0, 1 / number_of_samples)
 new_second_ruler = []
 for i in second_ruler:
     new_second_ruler.append(i + random_number)
